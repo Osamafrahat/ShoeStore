@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegation"
+    app:startDestination="@id/logIn">
+
+    <fragment
+        android:id="@+id/logIn"
+        android:name="com.osama.starter.logIn.LogIn"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logIn_to_welcome"
+            app:destination="@id/welcome" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeList"
+        android:name="com.osama.starter.shoeList.ShoeList"
+        android:label="fragment_shoe_list"
+        tools:layout="@layout/fragment_shoe_list" >
+        <action
+            android:id="@+id/action_shoeList_to_addItemDetails"
+            app:destination="@id/addItemDetails" />
+        <action
+            android:id="@+id/action_shoeList_to_logIn"
+            app:destination="@id/logIn" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcome"
+        android:name="com.osama.starter.logIn.Welcome"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcome_to_instruction"
+            app:destination="@id/instruction" />
+    </fragment>
+    <fragment
+        android:id="@+id/instruction"
+        android:name="com.osama.starter.logIn.Instruction"
+        android:label="fragment_instruction"
+        tools:layout="@layout/fragment_instruction" >
+        <action
+            android:id="@+id/action_instruction_to_shoeList"
+            app:destination="@id/shoeList" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemDetails"
+        android:name="com.osama.starter.shoeList.AddItemDetails"
+        android:label="fragment_add_item_details"
+        tools:layout="@layout/fragment_add_item_details" >
+        <action
+            android:id="@+id/action_addItemDetails_to_shoeList"
+            app:destination="@id/shoeList" />
+    </fragment>
+</navigation>
