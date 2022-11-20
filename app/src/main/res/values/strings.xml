@@ -25,7 +25,11 @@
     <string name="cancle">Cancle</string>
     <string name="shoe_name">Name:</string>
     <string name="shoe_size">Size :</string>
-    <string name="company">Company :</string>
-    <string name="discription">Discription :</string>
+    <string name="shoe_company">Company :</string>
+    <string name="shoe_description">Discription :</string>
     <string name="empty_hint">" "</string>
+    <string name="empty_list">empty List !</string>
+    <string name="empty_fields_warning"> * Please fill all fields</string>
+    <string name="logout">Log out</string>
+    <string name="instructions"> Click Next to browse Shoe List to add Shoe click add button </string>
 </resources>

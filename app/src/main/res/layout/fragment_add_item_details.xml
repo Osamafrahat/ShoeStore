@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    <variable
+        name="viewModel"
+        type="com.osama.starter.viewModel.ShoeDetailViewModel" />
+</data>
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="20dp"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".shoeList.AddItemDetails">
+    tools:context=".view.AddItemDetails">
 
     <LinearLayout
+        android:id="@+id/Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/shoeName_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
@@ -22,7 +31,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/shoeName_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -30,16 +39,18 @@
             android:hint="@string/empty_hint"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:text="@={viewModel.shoeName}" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/Size"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/shoeSize_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
@@ -47,33 +58,34 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName4"
+            android:id="@+id/shoeSize_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
             android:hint="@string/empty_hint"
             android:importantForAutofill="no"
-            android:inputType="textPersonName"
-            android:minHeight="48dp" />
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:text="@={viewModel.shoeSize}" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/ttttt"
+        android:id="@+id/Company"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/shoeCompany_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="@string/company"
+            android:text="@string/shoe_company"
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/shoeCompany_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -81,25 +93,27 @@
             android:hint="@string/empty_hint"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:text="@={viewModel.shoeCompany}" />
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/Description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/shoeDiscription_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="@string/discription"
+            android:text="@string/shoe_description"
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName5"
+            android:id="@+id/shoeDescription_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -107,17 +121,27 @@
             android:hint="@string/empty_hint"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
+            android:text="@={viewModel.shoeDescription}"
             tools:ignore="TouchTargetSizeCheck" />
+
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/empty_fields_warning" />
+
     <LinearLayout
+        android:id="@+id/Buttons"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="70dp"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/save_butt"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -126,7 +150,7 @@
             android:text="@string/save" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/cancel_butt"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -137,3 +161,5 @@
 
 
 </LinearLayout>
+
+</layout>

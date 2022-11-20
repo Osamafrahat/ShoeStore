@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".logIn.LogIn">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
+
+        tools:context=".view.LogIn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginTop="50dp"
         android:orientation="vertical"
         android:padding="30dp"
         android:paddingTop="30dp">
 
         <LinearLayout
+            android:id="@+id/Email"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
@@ -42,8 +42,9 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/Password"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="0"
             android:orientation="horizontal">
 
@@ -61,18 +62,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/hint_pass"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
-                tools:ignore="TouchTargetSizeCheck"
-                android:autofillHints="" />
+                tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/Log_Buttons"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:orientation="vertical">
 
@@ -91,5 +93,4 @@
                 android:text="@string/signIn_butt" />
         </LinearLayout>
     </LinearLayout>
-
-</FrameLayout>
+</layout>
